@@ -1,0 +1,7 @@
+spring:
+  datasource:
+    userName: root
+    password: DMa-t3S-L9n
+  jpa:
+    hibernate:
+      ddl-auto: create
