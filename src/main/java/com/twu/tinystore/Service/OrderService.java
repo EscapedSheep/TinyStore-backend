@@ -10,4 +10,6 @@ public interface OrderService {
     void addToOrder(Product product);
 
     List<Order> getOrder();
+
+    void deleteOrder(int productId);
 }

@@ -23,6 +23,12 @@ public class ProductServiceImpl implements ProductService{
                 .name("可乐")
                 .imgURL("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSILLjWyetALPAozWyikeZPwznKec2t4_3MMQ&usqp=CAU")
                 .build());
+        productRepository.save(ProductDto.builder()
+                .unit("瓶")
+                .price(5)
+                .name("另一瓶可乐")
+                .imgURL("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSILLjWyetALPAozWyikeZPwznKec2t4_3MMQ&usqp=CAU")
+                .build());
     }
 
     @Override

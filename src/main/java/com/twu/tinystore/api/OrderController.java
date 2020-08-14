@@ -6,10 +6,7 @@ import com.twu.tinystore.dto.OrderDto;
 import com.twu.tinystore.domain.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -31,5 +28,11 @@ public class OrderController {
     @GetMapping("/order")
     public ResponseEntity<List<Order>> getOrder() {
         return ResponseEntity.ok(orderService.getOrder());
+    }
+
+    @DeleteMapping("/order/{id}")
+    public ResponseEntity deleteOrder(@PathVariable int id) {
+        orderService.deleteOrder(id);
+        return ResponseEntity.ok().build();
     }
 }

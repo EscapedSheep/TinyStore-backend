@@ -40,4 +40,8 @@ public class OrderDto {
         }
         return result;
     }
+
+    public void removeOrder(Product product) {
+        orders.remove(product);
+    }
 }
