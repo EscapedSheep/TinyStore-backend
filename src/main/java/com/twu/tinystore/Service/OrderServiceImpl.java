@@ -1,26 +1,29 @@
 package com.twu.tinystore.Service;
 
 import com.twu.tinystore.domain.Order;
+import com.twu.tinystore.dto.OrderDto;
 import com.twu.tinystore.domain.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class OrderServiceImpl implements OrderService {
-    private Order order;
+    private OrderDto orderDto;
 
     @Autowired
-    public OrderServiceImpl(Order order) {
-        this.order = order;
+    public OrderServiceImpl(OrderDto orderDto) {
+        this.orderDto = orderDto;
     }
 
     @Override
     public void addToOrder(Product product) {
-        order.addProduct(product);
+        orderDto.addProduct(product);
     }
 
     @Override
-    public Order getOrder() {
-        return order;
+    public List<Order> getOrder() {
+        return orderDto.getOrder();
     }
 }

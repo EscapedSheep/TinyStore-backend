@@ -14,4 +14,21 @@ public class Product {
     private String unit;
     private double price;
     private String imgURL;
+    private int id;
+
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof Product) {
+            Product p = (Product) obj;
+            return p.id == id;
+        }
+        return false;
+    }
+
+    @Override
+    public int hashCode() {
+        return name.hashCode();
+    }
+
 }

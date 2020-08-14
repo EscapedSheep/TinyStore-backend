@@ -32,6 +32,7 @@ public class ProductDto {
                 .imgURL(imgURL)
                 .price(price)
                 .unit(unit)
+                .id(id)
                 .build();
     }
 }

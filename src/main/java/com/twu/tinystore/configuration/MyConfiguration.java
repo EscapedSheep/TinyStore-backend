@@ -1,6 +1,6 @@
 package com.twu.tinystore.configuration;
 
-import com.twu.tinystore.domain.Order;
+import com.twu.tinystore.dto.OrderDto;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
@@ -20,7 +20,7 @@ public class MyConfiguration extends WebMvcConfigurerAdapter {
     }
 
     @Bean
-    public Order getOrder() {
-        return new Order();
+    public OrderDto getOrder() {
+        return new OrderDto();
     }
 }

@@ -5,18 +5,14 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.ArrayList;
-import java.util.List;
-
 @Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Order {
-    private List<Product> orderList;
-
-    public Order() {
-        this.orderList = new ArrayList<>();
-    }
-
-    public void addProduct(Product product) {
-        orderList.add(product);
-    }
+    private String name;
+    private int id;
+    private String unit;
+    private double price;
+    private int count;
 }
